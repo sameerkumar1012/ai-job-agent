@@ -1,0 +1,12 @@
+requests
+pandas
+sentence-transformers
+scikit-learn
+python-telegram-bot
+apscheduler
+python-dotenv
+langchain-groq
+pypdf
+google-generativeai
+torch
+numpy

@@ -1,0 +1,14 @@
+Python
+SQL
+Tableau
+AWS
+PySpark
+Machine Learning
+Data Analytics
+Business Analysis
+LangChain
+RAG
+Data Visualization
+Pandas
+NumPy
+ETL Pipelines
