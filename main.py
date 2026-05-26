@@ -511,7 +511,7 @@ Job Description:
             print(
                 "\nPASSED ALL FILTERS\n",
                 flush=True
-            )
+            
 )
             # =======================================
             # GROQ SUMMARY
