@@ -414,7 +414,7 @@ def run_job_search():
             # FILTER LOW MATCHES
             # =======================================
 
-            if match_score < 50:
+            if match_score < 45:
 
                 continue
 
@@ -461,7 +461,7 @@ Job Description:
 
                 except:
 
-                    fresher_score = 7
+                    fresher_score = 5
 
             except Exception as e:
 
@@ -472,7 +472,7 @@ Job Description:
 
                 print(e)
 
-                fresher_score = 7
+                fresher_score = 5
 
             print(
                 f"Fresher Score: "
@@ -481,13 +481,38 @@ Job Description:
             )
 
             # =======================================
-            # STRICT FRESHER FILTER
+            # FINAL WEIGHTED SCORE
             # =======================================
 
-            if fresher_score < 5:
+            final_score = (
+
+                (match_score * 0.7)
+
+                +
+
+                ((fresher_score * 10) * 0.3)
+
+            )
+
+            print(
+                f"Final Weighted Score: "
+                f"{final_score}",
+                flush=True
+            )
+
+            # =======================================
+            # FINAL FILTER
+            # =======================================
+
+            if final_score < 50:
 
                 continue
 
+            print(
+                "\nPASSED ALL FILTERS\n",
+                flush=True
+            )
+)
             # =======================================
             # GROQ SUMMARY
             # =======================================
